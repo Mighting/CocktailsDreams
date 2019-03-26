@@ -6,9 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
+    TextView nameOfDrink;
     ListView simpleview;
     String[] drinksName;
     int[] drinksImages;
@@ -21,9 +23,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         drinkDescreptionActivity = new DrinkDescreptionActivity();
+
         final Intent goToDescreptionPageIntent = new Intent(this, DrinkDescreptionActivity.class);
 
         simpleview = findViewById(R.id.DrinkListView);
+        nameOfDrink = findViewById(R.id.textView);
 
         setupListview();
 
@@ -31,12 +35,13 @@ public class MainActivity extends AppCompatActivity {
         simpleview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String selected = parent.getItemAtPosition(position).toString();
+                goToDescreptionPageIntent.putExtra("selected",selected);
                 startActivity(goToDescreptionPageIntent);
             }
         });
 
     }
-
 
     public void setupListview() {
 
@@ -57,6 +62,4 @@ public class MainActivity extends AppCompatActivity {
 
         simpleview.setAdapter(listAdapter);
     }
-
-
 }
