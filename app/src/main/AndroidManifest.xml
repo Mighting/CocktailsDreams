@@ -9,8 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DrinkDescreptionActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".DrinkDescreptionActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value="zbc.assignment.cocktailsdreams.MainActivity">
+
+            </meta-data>
+        </activity>
+        <activity android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
