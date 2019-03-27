@@ -8,23 +8,23 @@
 
     <ImageView
         android:id="@+id/PictureofDrink"
-        android:layout_width="400dp"
-        android:layout_height="265dp"
+        android:layout_width="186dp"
+        android:layout_height="150dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_americano"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/ic_americano" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/NameofDrinkText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="Name of the drink"
         android:textAlignment="center"
@@ -36,14 +36,21 @@
 
     <TextView
         android:id="@+id/DescreptionofDrink"
-        android:layout_width="392dp"
-        android:layout_height="315dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="245dp"
+        android:layout_height="428dp"
+        android:layout_marginStart="18dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="8dp"
+        android:autoSizeMaxTextSize="16sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeStepGranularity="2sp"
+        android:autoSizeTextType="uniform"
         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at ultricies libero, a tempor diam. Quisque id felis at massa egestas imperdiet. Cras lobortis risus ac mi bibendum ornare. Quisque non ligula tempor, imperdiet mi vel, porttitor tortor. Cras egestas, felis vulputate ornare imperdiet, eros odio commodo mauris, non congue justo risus vel quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.  "
-        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NameofDrinkText" />
+        app:layout_constraintTop_toBottomOf="@+id/NameofDrinkText"
+        app:layout_constraintVertical_bias="0.123" />
 </android.support.constraint.ConstraintLayout>

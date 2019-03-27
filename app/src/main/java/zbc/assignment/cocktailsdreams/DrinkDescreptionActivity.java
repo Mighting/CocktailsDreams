@@ -27,9 +27,11 @@ public class DrinkDescreptionActivity extends AppCompatActivity implements Drink
         descreptionOfDrink = findViewById(R.id.DescreptionofDrink);
 
         String id = getIntent().getStringExtra("selected");
-        getSelected(id);
+        drinkPresenter.getDrinkID(id);
 
-        nameOfDrink.setText(drinkPresenter.setDrink());
+        drinkImage.setImageResource(drinkPresenter.setDrinkImage());
+        nameOfDrink.setText(drinkPresenter.setDrinkName());
+        descreptionOfDrink.setText(drinkPresenter.setDrinkDescription());
 
 
 
@@ -37,6 +39,6 @@ public class DrinkDescreptionActivity extends AppCompatActivity implements Drink
 
     @Override
     public String getSelected(String selected) {
-        return null;
+        return selected;
     }
 }

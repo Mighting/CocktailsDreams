@@ -1,5 +1,6 @@
 package zbc.assignment.cocktailsdreams;
 
+import android.media.Image;
 import android.util.Log;
 
 public class DrinkPresenter {
@@ -15,21 +16,23 @@ public class DrinkPresenter {
         this.view = view;
     }
 
-    Drink drink = new Drink();
+    CreateDrink createDrink;
 
-    public String setDrink(){
-        //return the drink after it has been made
-
-        drink.getDrinkImage();
-        drink.getDrinkName();
-        drink.getDrinkDescription();
-
-
-        String drink = "Americano";
-
-        return drink;
+    public void getDrinkID(String id) {
+       createDrink = new CreateDrink(id);
     }
 
+    public int setDrinkImage() {
+        return createDrink.setDrinkImg();
+    }
+
+    public String setDrinkName() {
+        return createDrink.setDrinkName();
+    }
+
+    public String setDrinkDescription() {
+        return createDrink.setDrinkDesc();
+    }
 
 
 }

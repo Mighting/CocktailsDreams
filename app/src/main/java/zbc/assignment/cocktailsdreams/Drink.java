@@ -4,15 +4,17 @@ import android.media.Image;
 
 public class Drink {
 
-    Image drinkImage;
+    int drinkImage;
     String drinkName;
     String drinkDescription;
 
-    public Image getDrinkImage() {
+
+
+    public int getDrinkImage() {
         return drinkImage;
     }
 
-    public void setDrinkImage(Image drinkImage) {
+    public void setDrinkImage(int drinkImage) {
         this.drinkImage = drinkImage;
     }
 
@@ -32,12 +34,7 @@ public class Drink {
         this.drinkDescription = drinkDescription;
     }
 
-
     public Drink() {
-
     }
 
-    public Drink finishedDrink(Drink drink){
-        return drink;
-    }
 }
